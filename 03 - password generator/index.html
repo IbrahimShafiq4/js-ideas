@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="password-box">
+            <h2 class="heading">Password Generator</h2>
+            <div class="box">
+                <input type="text" placeholder="Password Generator" class="result-input">
+                <button type="button" class="copy-btn">
+                    <i class="ri-file-copy-fill"></i>
+                </button>
+            </div>
+            <h4 class="pass-length">Password Length</h4>
+            <div class="range-box">
+                <input type="range" min="1" max="40" value="10" class="range-btn">
+                <p class="range-num">10</p>
+            </div>
+            <div class="include-input-box">
+                <input type="checkbox" name="uppercase" class="checkbox-input" checked id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div class="include-input-box">
+                <input type="checkbox" name="lowercase" class="checkbox-input" id="lowercase">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div class="include-input-box">
+                <input type="checkbox" name="numbers" class="checkbox-input" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="include-input-box">
+                <input type="checkbox" name="symbols" class="checkbox-input" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+            <button class="generate-btn">Generate Password</button>
+        </div>
+
+        <div class="alert">
+            <div class="popup">
+                <p>Please Select </p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
