@@ -19,8 +19,8 @@ Each project idea comes with a brief description, the key concepts it covers, an
 
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/yourusername/js-project-ideas.git
-   cd js-project-ideas
+   git clone https://github.com/IbrahimShafiq4/js-ideas.git
+   cd js-ideas
    ```
 
 2. **Explore the Projects:**
