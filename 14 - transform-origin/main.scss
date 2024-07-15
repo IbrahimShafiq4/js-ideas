@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+
+.origin {
+  width: 1em;
+  height: 1em;
+  font-size: 13vmin;
+  position: relative;
+  background: rgba(0,0,0,.4);
+  animation: spin 6s cubic-bezier(.8, 0, .2, 1) infinite;
+  @keyframes spin {
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 1px red;
+    transform-origin: inherit;
+    // visibility: hidden;
+  }
+
+  &:before { 
+    animation: inherit;
+    animation-direction: reverse;
+    text-shadow: 0 1px 0 #000;
+
+    font-size: .11em;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0.2em;
+    content: attr(style);
+    display: flex;
+    text-align: center;
+    word-break: keep-all;
+    align-items: center;
+    z-index: 2;
+  }
+
+  &:after {
+    background: red;
+    transform: scale(0.1); 
+  }
+}
+
+/* ---------------------------------- */
+
+
+html, body { 
+  background: #00136c;
+}
+
+.origin {
+  background: #3b2c85;
+  background: rgba(#85cfcb, .3);
+
+  &:before { border: solid 1px #db3951; color: rgba(#FFF,.8); z-index: 5;}
+  &:after { background: #db3951; }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html { 
+  display: grid; 
+  justify-items: center;
+  align-items: center;
+  height: 100%; 
+  overflow: hidden;
+}
+
+body {
+  display: grid;
+  grid-template: repeat(3, auto) / repeat(3, auto);
+  grid-gap: 1em;
+}
