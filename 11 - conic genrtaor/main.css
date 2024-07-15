@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 3em 1em;
+}
+
+input, button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+h1 {
+  padding: 20px;
+  line-height: 1;
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: 240px 170px;
+  grid-gap: 30px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  border: 1px solid #111;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .chart {
+    padding: 30px 0;
+    max-width: 320px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.pie {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid white;
+}
+.pie_dial {
+  position: absolute;
+  bottom: 50%;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 120px;
+  background-color: white;
+  transform-origin: bottom;
+}
+
+.value {
+  padding: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25em;
+}
+.value_input {
+  padding: 0 0.5em;
+  width: 5em;
+  height: 2em;
+  border: none;
+  border-radius: 4px;
+}
+.value_button {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 4px;
+  margin-left: 0.25em;
+}
+.value_button:disabled {
+  color: rgba(255, 255, 255, 0.1333333333);
+}
+.value_color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 2em;
+  opacity: 0;
+}
+.value_addText {
+  margin-left: 0;
+}
+.value.clickable, .value_button {
+  cursor: pointer;
+}
+
+.code {
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  border: 1px solid #111;
+  border-radius: 4px;
+  margin-top: 1em;
+}
+@media (max-width: 768px) {
+  .code {
+    max-width: 320px;
+  }
+}
+.code .indent {
+  padding-left: 1em;
+}/*# sourceMappingURL=main.css.map */
