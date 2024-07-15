@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s linear;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.5s linear;
+}
+
+body.darkMode {
+    background-color: #222;
+}
+
+.box {
+    position: relative;
+    width: 600px;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.5s linear;
+}
+
+.darkMode .box {
+    background-color: #292929;
+}
+
+.profile {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 10px;
+}
+
+.imgBx {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: co;
+}
+
+.text {
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+
+.darkMode .text {
+    color: #fff;
+}
+
+.text span {
+    font-weight: 600;
+    font-size: 0.85em;
+    color: #555;
+}
+
+.darkMode .text span {
+    color: #aaa;
+}
+
+.menu {
+    position: relative;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.darkMode .menu {
+    border-top: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.menu li {
+    list-style: none;
+    margin: 8px 0;
+}
+
+.menu li label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li label span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    color: #444;
+}
+
+.darkMode .menu li label span {
+    color: #aaa;
+}
+
+.menu li label span ion-icon {
+    margin-right: 10px;
+}
+
+.check {
+    color: #2aa0ff
+}
+
+.menu li label .action {
+    position: relative;
+}
+
+.menu li label .action input {
+    appearance: none;
+}
+
+.menu li label .action i {
+    position: realtive;
+    width: 30px;
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 15px;
+    transition: 0.3s linear;
+}
+
+.darkMode .menu li label .action i {
+    background-color: #666;
+}
+
+.menu li label .action input:checked ~ i {
+    background-color: #2aa0ff;
+}
+
+.menu li label .action i::before {
+    content: '';
+    position: absolute;
+    top: 4.5px;
+    left: 2.5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s linear;
+}
+
+.menu li label .action input:checked ~ i::before {
+    left: calc(100% - 12.5px);
+}
