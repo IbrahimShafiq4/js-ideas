@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 6000px;
+}
+
+section {
+    position: fixed;
+    inset: 0;
+    clip-path: circle(0 at center);
+    transition: 0.5s linear;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

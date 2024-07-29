@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+    perspective: 1000px;
+}
+
+.scene {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+}
+
+.cube {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500;
+    border: 1px solid #fff;
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(150px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(150px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+    span {
+        width: 30px;
+        height: 30px;
+        background-color: #333d;
+        border: 1px solid #fff1;
+        transform-style: preserve-3d;
+        perspective: 500px;
+
+        &.active {
+            background-color: #fff;
+            z-index: 10000;
+            filter: drop-shadow(0 0 20px #fff);
+        }
+
+        &.active-even {
+            background-color: #c43a3abe;
+            filter: drop-shadow(0 0 20px #c43a3abe);
+        }
+
+        &.active-odd {
+            background-color: #68c43abe;
+            filter: drop-shadow(0 0 20px #68c43abe);
+        }
+    }
+}
