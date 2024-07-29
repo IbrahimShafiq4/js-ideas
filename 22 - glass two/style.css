@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgba(184, 64, 64, 0.769) 20%, rgba(32, 32, 168, 0.569) 80%);
+}
+
+div {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    span {
+        &.outer-span {
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s linear;
+            cursor: pointer;
+            filter: blur(5px);
+        }
+
+        .inner-span {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            transition: 0.5s linear;
+            &.top-left {
+                top: -10px;
+                left: -10px;
+                border: 3px solid transparent;
+                border-top: 3px solid #fff;
+                border-left: 3px solid #fff;
+            }
+            &.top-right {
+                top: -10px;
+                right: -10px;
+                border: 3px solid transparent;
+                border-top: 3px solid #fff;
+                border-right: 3px solid #fff;
+            }
+            &.bottom-left {
+                bottom: -10px;
+                left: -10px;
+                border: 3px solid transparent;
+                border-bottom: 3px solid #fff;
+                border-left: 3px solid #fff;
+            }
+            &.bottom-right {
+                bottom: -10px;
+                right: -10px;
+                border: 3px solid transparent;
+                border-bottom: 3px solid #fff;
+                border-right: 3px solid #fff;
+            }
+        }
+    
+        &.active-outer-span {
+            filter: blur(0px);
+
+            .inner-span {
+                width: 110%;
+                height: 110%;
+            }
+        }
+    }
+}

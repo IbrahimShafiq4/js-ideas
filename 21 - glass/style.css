@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(90deg, #d593e684 20%, #60badbe1 80%);
+    width: 100%;
+}
+
+.glass {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    width: 20rem;
+    height: 20rem;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.8rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    > * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+}
