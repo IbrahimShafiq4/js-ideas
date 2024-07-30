@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-black: rgba(28, 36, 39, 0.5);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.boxes {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    transition: 0.5s ease-out;
+}
+
+.boxes:hover {
+    width: 600px;
+    height: 600px;
+}
+
+.box { 
+    width: 125px;
+    height: 125px;
+    background-image: url(./humonster.gif);
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    transition: 0.5s ease-out;
+    box-shadow: 5px 5px 5px var(--light-black);
+}
+
+.boxes:hover .box {
+    transform: rotateZ(360deg);
+}
