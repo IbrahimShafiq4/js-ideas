@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #222;
+    overflow: hidden;
+}
+
+.box {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--img);
+    background-size: cover;
+    transition: 1s;
+}
+
+.box .item:nth-child(n-9) {
+    transform: translate3d(0, -100vw, 0);
+}
+
+.box .item:nth-child(10) {
+    transform: translate3d(-100px, -100px, 0) rotate(5deg);
+}
+
+.box .item:nth-child(11) {
+    transform: translate3d(-50px, -50px, 0) rotate(-15deg);
+}
+
+.box .item:nth-child(12) {
+    transform: translate3d(0, 0, 0) rotate(15deg);
+}
+
+.box .item:nth-child(13) {
+    transform: translate3d(50px, 50px, 0) rotate(-5deg);
+}
+
+.box .item:nth-child(n+14) {
+    transform: translate3d(0, 100vw, 0);
+}
+
+.box .item::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    font-size: 5em;
+    transform: 1s;
+    font-weight: 800;
+    white-space: nowrap;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #ebc764;
+    text-shadow: 0 5px 15px #ebc764;
+    transform: translate(-50vw, 50vh, 0) rotate(0);
+    opacity: 0;
+}
+
+.box .item:nth-child(13)::before {
+    transform: translate3d(-150px, 250px, 0) rotate(5deg);
+    opacity: 1;
+}
