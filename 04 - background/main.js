@@ -15,8 +15,13 @@ function generate() {
         translateY: function() {
             return anime.random(-1000, 1000)
         },
+
         scale: function() {
             return anime.random(1,5)
+        },
+
+        opacity: function() {
+            return anime.random(Math.random(), Math.random(), 1)
         }
     })
 }
