@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:  100vh;
+    background-color: #242424;
+    overflow: hidden;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    transform-style: preserve-3d;
+    text-align: center;
+
+    .text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        animation: animate 24s linear infinite;
+
+        span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-transform: uppercase;
+            font-size: 8em;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.75);
+            box-sizing: border-box;
+            -webkit-text-stroke: 1px #000;
+            text-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+            transform: rotateX(calc(var(--i) * 15deg));
+
+            b {
+                color: #00b8ffcc;
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateX(360deg)
+    }
+    100% {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+}

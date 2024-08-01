@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    padding: 20px 0 0;
+    place-items: center;
+    background-color: #14252c;
+    font-family: cursive;
+}
+
+.container {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.users {
+    background-color: #82401d;
+    color: #14252c;
+    list-style: none;
+    padding: 10px 20px;
+    width: 300px;    
+    display: grid;
+    gap: 15px;
+    border-radius: 5px;
+}
+
+li {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+i {
+    cursor: pointer;
+}
+
+.posts {
+    width: 600px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #a3a39b;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 0 20px 0;
+}
+
+.posts-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.posts-content {
+    padding: 10px 20px;
+}
+
+.posts-content p {
+    font-weight: bold;
+    line-height: 1.4;
+    font-size: 17px;
+}
+
+.posts-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-top: 1px solid rgb(237, 237, 237, 0.5);
+    border-bottom: 1px solid rgb(237, 237, 237, 0.5);
+}
+
+.posts-details i {
+    font-size: 30px;
+    color: #fff;
+}
+
+.write-comment {
+    position: relative;
+}
+
+input {
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.icons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-30%, calc(25% + 8px));
+    display: flex;
+    gap: 10px;
+    color: #aaa;
+}
+
+.icons i {
+    font-size: 18px;
+}
+
+.comment {
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.comment-details {
+    padding: 10px 20px;
+    display: grid;
+    gap: 8px;
+    border-radius: 10px;
+    background-color: #e6cab3;
+}
+
+.comment-name {
+    font-size: 18px;
+}
+
+.comments-content {
+    padding: 0 20px;
+}
+
+.comment-like-replay {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.comment-like-replay p {
+    cursor: pointer;
+}
