@@ -1,0 +1,5 @@
+مهم انك تستخدم 
+overflow: hidden;
+علشان تخفي ال 
+color fillness
+قبل الانيميشن
