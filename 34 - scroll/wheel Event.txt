@@ -1,0 +1,14 @@
+e.daltaY 
+دي بترجع قيمة مزدوجة القيمة دي بتعبر عن اتجاه حركة ال
+scroll by using the wheel event
+
+01 - A positive double value => بتعبر عن انك كدة بتعمل سكرول لتحت
+02 - A negative double value => بتعبر عن انك بتعمل سكرول لفوق
+
+instead of 
+e.daltaY
+
+you can also use
+e.screenY
+provides the vertical coordinate (offset) of the mouse pointer in screen coordinates.
+بيعبر عن الاحداثيات الافقية اللي الماوس بيعملها علي احداثيات الشاشة
