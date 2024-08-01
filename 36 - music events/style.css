@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+body {
+    background-color: #EBF2FF;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    width: 800px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.music-boxs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    .contentBx {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .time {
+            background-color: var(--background-color);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            p {
+                font-size: 0.75rem;
+                text-align: center;
+            }
+    
+            b {
+                font-size: 25px;
+                font-weight: 600;
+            }
+        }
+    
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h4 {
+                font-size: 1.3em;
+            }
+            p {
+                font-size: 0.8rem;
+                text-wrap: wrap;
+            }
+        }
+    }
+
+    button {
+        text-wrap: nowrap;
+        &.sold {
+            font-weight: bold;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        &.buy {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+@media (max-width :767px) {
+    * {
+        flex-direction: column;
+    }
+
+    section {
+        width: 600px
+    }
+}
