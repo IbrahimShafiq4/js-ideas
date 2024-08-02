@@ -1,0 +1,90 @@
+هشرحلك الفانكشن اللي بتعمل الدوران للأسهم بالعامية المصرية ومع أمثلة لكل جزء فيها.
+
+### الفانكشن rotation:
+
+الفانكشن دي بتعمل حركة الدوران للأسهم حسب حركة الماوس.
+
+```js
+function rotation(event) {
+    // بتجيب كل العناصر اللي ليها الكلاس "arrow"
+    let arrows = document.querySelectorAll('.arrow');
+    
+    // بتعمل لوب على كل عنصر من العناصر دي
+    arrows.forEach((arrow) => {
+        // بتحسب مركز العنصر (الـ X و Y) بالنسبة للصفحة
+        let x = arrow.getBoundingClientRect().left + (arrow.clientWidth / 2);
+        let y = arrow.getBoundingClientRect().top + (arrow.clientHeight / 2);
+
+        // بتحسب الزاوية (radian) بين العنصر والماوس
+        let radian = Math.atan2(event.pageX - x, event.pageY - y);
+        
+        // بتحول الزاوية من radian إلى درجة (degree)
+        let rotationDegree = (radian * (180 / Math.PI)) + 270;
+        
+        // بتغير دوران العنصر بالزاوية المحسوبة
+        arrow.style.transform = `rotate(${rotationDegree}deg)`;
+    });
+}
+```
+
+### شرح كل جزء بالفانكشن:
+
+1. **الحصول على العناصر (arrows):**
+   ```js
+   let arrows = document.querySelectorAll('.arrow');
+   ```
+   هنا بنجيب كل العناصر اللي ليها الكلاس "arrow".
+
+   **مثال:**
+   - لو عندك 3 عناصر "arrow"، `arrows` هيكون فيها 3 عناصر.
+
+2. **اللوب على كل عنصر:**
+   ```js
+   arrows.forEach((arrow) => {
+   ```
+   بنعمل لوب على كل عنصر في `arrows`.
+
+   **مثال:**
+   - لو عندك 3 عناصر، الفانكشن هتشتغل 3 مرات، مرة لكل عنصر.
+
+3. **حساب مركز العنصر:**
+   ```js
+   let x = arrow.getBoundingClientRect().left + (arrow.clientWidth / 2);
+   let y = arrow.getBoundingClientRect().top + (arrow.clientHeight / 2);
+   ```
+   هنا بنحسب مركز العنصر بالنسبة للصفحة.
+
+   **مثال:**
+   - لو العنصر مكانه 100 بكسل من اليسار وعرضه 50 بكسل، `x` هيبقى 125 بكسل.
+   - لو العنصر مكانه 200 بكسل من الأعلى وارتفاعه 70 بكسل، `y` هيبقى 235 بكسل.
+
+4. **حساب الزاوية (radian):**
+   ```js
+   let radian = Math.atan2(event.pageX - x, event.pageY - y);
+   ```
+   هنا بنحسب الزاوية بالـ radian بين مركز العنصر ومكان الماوس.
+
+   **مثال:**
+   - لو الماوس عنده إحداثيات (400, 300) و مركز العنصر عنده (125, 235)، هنحسب الزاوية بينهم.
+
+5. **تحويل الزاوية من radian إلى درجة (degree):**
+   ```js
+   let rotationDegree = (radian * (180 / Math.PI)) + 270;
+   ```
+   هنا بنحول الزاوية من radian إلى درجة.
+
+   **مثال:**
+   - لو الزاوية كانت 1 radian، بتحول لـ 57.3 درجة تقريبًا وبعدين بنضيف 270 علشان ندور العنصر بشكل صحيح.
+
+6. **تطبيق الدوران على العنصر:**
+   ```js
+   arrow.style.transform = `rotate(${rotationDegree}deg)`;
+   ```
+   هنا بنغير الـ CSS للعنصر علشان يدور بالزاوية اللي حسبناها.
+
+   **مثال:**
+   - لو `rotationDegree` كان 327.3 درجة، العنصر هيدور 327.3 درجة.
+
+### الشرح الكامل:
+
+لما الصفحة تتحمل (DOMContentLoaded)، بننشئ 50 عنصر "arrow" ونحطهم في الصفحة. بعد كده بنضيف Event Listener على حركة الماوس (mousemove)، ولما الماوس يتحرك، بنشغل الفانكشن rotation اللي بتحسب الزاوية بين كل سهم والماوس وبتغير دوران السهم علشان يبقى موجه ناحية الماوس.
