@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ffee5a;
+    overflow: hidden;
+    animation: hue-rotate 3s linear infinite;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container .arrow {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background: url('left-arrow.png') no-repeat center center;
+    background-size: cover;
+    transform: scale(0.75);
+}
+
+.container .arrow:nth-child(even) {
+    filter: grayscale(calc(var(--i) * 100%)) contrast(calc(var(--i) * 100%)) hue-rotate(calc(var(--i) * 360deg));
+}
+
+@keyframes hue-rotate {
+    0%, 100% {
+        filter: hue-rotate(0);
+    }
+    
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
