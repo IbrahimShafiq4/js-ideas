@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1a3636;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.game {
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    color: #fff;
+
+    .game-controls {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 10px 0;
+        gap: 10px;
+    }
+
+    .game-title {
+        background-color: #6482ad;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        gap: 0.3rem;
+        span {
+            color: #fa0;
+            font-weight: bold;
+        }
+    }
+
+    .squares {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: calc(90% - 10px);
+        gap: 10px;
+        .square {
+            font-family: cursive;
+            background-color: #6482ad;
+            font-size: 5em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &.x {
+                background-color: #40534c;
+            }
+
+            &.o {
+                background: #677d6a;
+            }
+        }
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.3em;
+        color: #fff;
+        &:nth-child(1) {
+            background-color: #EF5A6F;
+            font-weight: bold;
+        }
+        &:last-child {
+            background-color: #649ead;
+        }
+    }
+}
