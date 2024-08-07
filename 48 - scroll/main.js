@@ -1,53 +1,54 @@
-// Select the first element with the class 'text'
+// بنختار أول عنصر في الصفحة عنده الكلاس 'text'
 let textEl = document.querySelector('.text');
 
-// Get the text content of the selected element
+// بنجيب النص اللي جواه العنصر اللي اخترناه
 let textContent = textEl.textContent;
 
-// Clear the inner HTML of the selected element
+// بنفضي المحتوى الداخلي للعنصر اللي اخترناه
 textEl.innerHTML = '';
 
-// Initialize an empty array to hold span elements
+// بنعمل مصفوفة فاضية عشان نحط فيها العناصر اللي هنعملها بعد كده
 let spans = [];
 
-// Loop through each character in the text content
+// بنعدي على كل حرف في النص اللي جبناه
 for (let char of textContent) {
-    // Create a new span element
+    // بنعمل عنصر سبان جديد
     let span = document.createElement('span');
     
-    // Set the text content of the span to the current character
+    // بنحط الحرف الحالي جوا السبان الجديد
     span.textContent = char;
     
-    // Append the span element to the selected element
+    // بنضيف السبان الجديد للعنصر اللي اخترناه
     textEl.appendChild(span);
     
-    // Add the span element to the spans array
+    // بنضيف السبان ده للمصفوفة بتاعتنا
     spans.push(span);
 }
 
 // Add an event listener for the 'scroll' event on the window
 window.addEventListener('scroll', () => {
-    // Get the current scroll distance from the top of the window
+    // بنجيب المسافة اللي تم سكرولها من أعلى الصفحة
     let scrollDistance = window.scrollY;
     
-    // Loop through each span element in the spans array
+    // بنعدي على كل عنصر سبان في المصفوفة
     spans.forEach((span, index) => {
-        // If the scroll distance is greater than or equal to a certain value
+        // لو المسافة اللي اتعملها سكرول أكبر أو تساوي قيمة معينة
         if (scrollDistance >= (index + 1) * 50) {
-            // Translate the span horizontally based on its index
+            // بنحرك السبان أفقيًا بناءً على رقمه
             span.style.transform = `translate(${index * 20}px, 0)`;
             
-            // Add the 'active' class to the span
+            // بنضيف كلاس 'active' للسبان
             span.classList.add('active');
         } else {
-            // Translate the span to a random position within the viewport
+            // بنحرك السبان لمكان عشوائي جوا الشاشة
             span.style.transform = `translate(${Math.random() * 100 - 50}vw, ${Math.random() * 100 - 50}vh)`;
             
-            // Remove the 'active' class from the span
+            // بنشيل كلاس 'active' من السبان
             span.classList.remove('active');
         }
     });
 });
+
 
 // Dispatch a 'scroll' event to the window to initialize the effect
 window.dispatchEvent(new Event('scroll'));
