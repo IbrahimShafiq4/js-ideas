@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #555;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    transform: skewY(-20deg);
+
+    .cube {
+        position: relative;
+        transform: translate(calc(var(--z) * 60px), calc(var(--z) * 60px));
+
+        div {
+            position: absolute;
+            transform: translateX(calc(-70px * var(--x))) translateY(calc(-70px * var(--y)));
+
+            span {
+                position: relative;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-color: #dcdcdc;
+                transition: 1.5s linear;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -40px;
+                    width: 40px;
+                    height: 100%;
+                    background-color: #c8c8c8;
+                    transform: skewY(45deg);
+                    transition: 1.5s linear;
+                    transform-origin: right;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                    background-color: #f2f2f2;
+                    transform-origin: bottom;
+                    width: 100%;
+                    height: 40px;
+                    transform: skewX(45deg);
+                    box-shadow: -100px 100px 5px rgba(0, 0, 0, 0.15);
+                    transition: 1.5s linear
+                }
+
+                &.active-span {
+                    background-color: #f00;
+                    animation: animate 3s linear infinite alternate-reverse;
+
+                    &.active-even-span {
+                        transform: translate(0, -50px);
+                    }
+
+                    &.active-odd-span {
+                        transform: translate(0, 50px);
+                    }
+
+                    &::before {
+                        background-color: #f75d64;
+                    }
+
+                    &::after {
+                        background-color: #f13e55;
+                        box-shadow: -150px 150px 5px rgba(0, 0, 0, 0.15);
+                    }
+
+                    &.active-odd-span {
+                        &::after {
+                            box-shadow: -75px 75px 5px 5px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes animate {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+
+    20% {
+        filter: hue-rotate(45deg);
+    }
+
+    40% {
+        filter: hue-rotate(90deg);
+    }
+
+    60% {
+        filter: hue-rotate(-90deg);
+    }
+
+    80% {
+        filter: hue-rotate(-45deg);
+    }
+}
