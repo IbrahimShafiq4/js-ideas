@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    display: flex;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    min-height: 710vh;
+}
+
+.box {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+p {
+    color: #fff;
+}
+
+p span {
+    position: relative;
+    color: #666;
+    font-size: 1.5em;
+    transition: 0.25s linear;
+}
+
+.active {
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0;
+}
