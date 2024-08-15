@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="box"></div>
+        <h2>Ibrahim</h2>
+    </section>
+
+    <!-- الجزء ده هو الفلتر اللي بيتعمل عشان يدي تأثير "gooey" على العناصر اللي هنطبق عليه الفلتر -->
+    <svg>
+        <!-- هنا الفلتر بيدينا نوع من البلور (GaussianBlur) للعنصر وبيخليه زي السائل أو الجيلي -->
+        <filter id="gooey">
+            <!-- Gaussian Blur بيعمل بلور للعنصر -->
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+
+            <!-- feColorMatrix ده بيسمح لنا نعدل الألوان والتباين بتاع الصورة بعد البلور -->
+            <feColorMatrix values="
+                    1 0 0 0 0   
+                    0 1 0 0 0   
+                    0 0 1 0 0   
+                    0 0 0 50 -10" />
+            <!-- 
+                        1 0 0 0 0   اول سطر بيتحكم في اللون الأحمر
+                        0 1 0 0 0   تاني سطر بيتحكم في اللون الأخضر
+                        0 0 1 0 0   تالت سطر بيتحكم في اللون الأزرق
+                        0 0 0 50 -10" السطر الأخير ده بيتحكم في الشفافية (ألفا) والتباين -->
+        </filter>
+    </svg>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
