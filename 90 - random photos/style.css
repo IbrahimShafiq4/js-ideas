@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100%;
+    padding: 100px 0;
+    background-color: #262626;
+    background-image: linear-gradient(to right, #333 1px, transparent 1px),
+        linear-gradient(to bottom, #333 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.image-container {
+    padding: 20px 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    user-select: none;
+}
+
+button {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    background-image: linear-gradient(45deg, #1E201E, #3C3D37);
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
