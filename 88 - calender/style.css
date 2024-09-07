@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+* { 
+    font-family: "SUSE", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #FF885B, #227B94 80%);
+}
+
+.calender-container {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 
+            1px 1px 5px rgba(0, 0, 0, 0.2),
+            -1px -1px 5px rgba(0, 0, 0, 0.2),
+            inset 1px 1px 5px rgba(0, 0, 0, 0.2),
+            inset -1px -1px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.month-name {
+    font-family: "Protest Guerrilla", sans-serif;
+    background-color: #E85C0D;
+    padding: 10px 0;
+    font-size: calc(2rem - 2px);
+    margin: 0;
+}
+
+.day-name {
+    font-size: 1.3rem;
+    color: rgb(160, 160, 160);
+}
+
+.day-number {
+    font-size: 5rem;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.year {
+    margin: 1.2rem 0;
+    font-size: 1.3rem;
+    color: darkgrey;
+    font-weight: 500;
+}

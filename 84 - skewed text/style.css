@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Almarai", sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    overflow: hidden;
+}
+
+section .textBox {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #333;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+section h2,
+section .textBox h2 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 12em;
+    line-height: 1em;
+    color: #0488f5;
+    -webkit-text-stroke: 2px #0876cf;
+    cursor: pointer;
+}
+
+section h2 {
+    color: transparent;
+}
+
+.skew1 {
+    position: relative;
+    top: 50px;
+    transform: skewY(20deg);
+}
+
+.skew2 {
+    position: relative;
+    top: 50px;
+    transform: skewY(-20deg);
+}
