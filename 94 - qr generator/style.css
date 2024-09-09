@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: "Almarai", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, #D8EFD3, #EF9C66);
+    animation: hue-rotate 2s ease-in-out infinite;
+}
+
+.qr-wrapper {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 30rem;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    .qr-input {
+        width: 100%;
+        input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            outline: none;
+            backdrop-filter: blur(10px);
+            background-color: transparent;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+            border-radius: 5px;
+            color: #000;
+            &::placeholder {
+                color: #000;
+            }
+        }
+    }
+
+    .qr-button {
+        margin: 0 auto;;
+        button {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            transition: 0.3s linear;
+
+            &:hover {
+                box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    .qr-img {
+        margin: 0 auto;
+        text-align: center;
+        img {
+            width: 75%;
+        }
+    }
+}
