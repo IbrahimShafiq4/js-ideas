@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dark-mode">
+        <input type="checkbox" class="dark-mode-input" name="dark-mode" id="dark-mode">
+        <label for="dark-mode">
+            <div class="circle"></div>
+        </label>
+    </div>
+    <!-- <button>Play US Accent</button> -->
+    <!-- Start Bx-wrapper -->
+    <div class="bx-wrapper">
+        <h3>Words Defination and Translation into Arabic</h3>
+        <!-- Start defination and translation fields -->
+        <div class="defination-wrapper">
+            <div class="defination-controls">
+                <input type="text" placeholder="Enter your desired word to be defined" class="defination-input">
+                <button class="defination-btn"> Defination </button>
+            </div>
+            <div class="defination-details">
+                <div class="definations">
+                    <p class="defination"></p>
+                </div>
+                <div class="definition-voices" style="margin: 15px 0 0;">
+                    <button class="us-accent"> US Audio </button>
+                    <audio src="" class="us-audio"></audio>
+                    <button class="uk-accent"> UK Audio </button>
+                    <audio src="" class="uk-audio"></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bx-wrapper -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
