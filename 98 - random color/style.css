@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sofadi One", system-ui;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    transition: 0.3s linear;
+}
+
+.container {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.colors-controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        padding: 5px 10px;
+        background-color: #16423C;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.colors-wrapper {
+    margin: 20px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+
+    >* {
+        font-family: "Almarai", sans-serif;
+    }
+
+    .color-container {
+        width: 100%;
+        background-color: var(--clr);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        aspect-ratio: 2 / 1;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 0.25rem;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+
+        div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: fit-content;
+            padding: 5px 10px;
+            mix-blend-mode: difference;
+            background-color: var(--clr);
+
+        }
+    }
+}
