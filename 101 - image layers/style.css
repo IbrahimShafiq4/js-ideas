@@ -32,19 +32,19 @@ figure {
         opacity: 1;
 
         &:nth-child(4) {
-            transform: translate3d(0, 0, 75px) rotateX(60deg);
+            transform: translate3d(0, 0, 75px) rotateX(45deg);
         }
 
         &:nth-child(3) {
-            transform: translate3d(0, 0, 75px) rotateX(60deg);
+            transform: translate3d(0, 0, 75px) rotateX(45deg);
         }
 
         &:nth-child(2) {
-            transform: translate3d(0, 0, 75px) rotateX(60deg);
+            transform: translate3d(0, 0, 75px) rotateX(45deg);
         }
 
         &:nth-child(1) {
-            transform: translate3d(0, 0, 75px) rotateX(60deg);
+            transform: translate3d(0, 0, 75px) rotateX(45deg);
         }
     }
 
