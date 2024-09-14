@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section class="controllers">
+            <button type="button" id="bold">
+                <i class="fa-solid fa-b"></i>
+            </button>
+            <button type="button" id="italic">
+                <i class="fa-solid fa-italic"></i>
+            </button>
+            <button type="button" id="font-family">
+                <i class="fa-solid fa-t"></i>
+            </button>
+            <button type="button" id="underline">
+                <i class="fa-solid fa-underline"></i>
+            </button>
+            <button type="button" id="align-left">
+                <i class="fa-solid fa-align-left"></i>
+            </button>
+            <button type="button" id="align-center">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+            <button type="button" id="align-right">
+                <i class="fa-solid fa-align-right"></i>
+            </button>
+            <button type="button" id="list">
+                <i class="fa-solid fa-list"></i>
+            </button>
+        </section>
+        <section class="content">
+            <div contenteditable="true" id="editor"></div>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>
