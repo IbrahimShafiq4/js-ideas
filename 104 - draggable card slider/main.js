@@ -2,6 +2,7 @@ const wrapper = document.querySelector('.wrapper');
 const carousel = document.querySelector('.carousel');
 const arrowBtns = document.querySelectorAll('.wrapper i');
 const firstCardWidth = carousel.querySelector('.card').offsetWidth;
+console.log(carousel.querySelector('.card'));
 const carouselChildren = [...carousel.children];
 
 let isDragging = false, startX, startScrollLeft, timeoutId;

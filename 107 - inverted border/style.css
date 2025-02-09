@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("");
+    background-size: cover;
+    font-family: "Fredoka";
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.card_wrapper {
+    position: relative;
+}
+
+.card {
+    position: relative;
+    filter: drop-shadow(0 0 5px #024120ca);
+}
+
+.card-image-with-svg-mask {
+    width: 80vw;
+    height: 80vh;
+    background-image: url("/images/chameleons.avif");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+    position: relative;
+}
+
+/* mask image */
+.card-image-with-svg-mask {
+    -webkit-mask: url("/images/top-center.png") center / contain no-repeat, url("/images/bottom-right.png") center / contain no-repeat, linear-gradient(#000000 0 0);
+    mask-size: 22rem, 30rem;
+    mask-position: top center, bottom right;
+    mask-composite: exclude;
+}
+
+p.text {
+    color: #ffff;
+    width: 350px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.button {
+    position: absolute;
+    background-color: #a9ff7d;
+    border-radius: 1.5rem;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-center {
+    width: 240px;
+    height: 95px;
+    top: 1%;
+    right: 0%;
+    left: 0%;
+    margin: 0 auto;
+}
+
+.top-center .text {
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: url("/images/chameleons.avif") top / cover no-repeat;
+    background-clip: text;
+    color: transparent;
+}
+
+.bottom-right {
+    width: 380px;
+    height: 160px;
+    border-radius: 2.5rem;
+    bottom: 2%;
+    right: 1%;
+}
+
+.bottom-right .text {
+    font-size: 19px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.fa-quote-left,
+.fa-quote-right {
+    position: absolute;
+    font-size: 40px;
+    color: rgb(245, 245, 245);
+}
+
+.fa-quote-left {
+    top: -35px;
+    left: -10px;
+}
+
+.fa-quote-right {
+    right: 20px;
+    bottom: -30px;
+}

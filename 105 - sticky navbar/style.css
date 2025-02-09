@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 20%;
+    padding: 10px 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+section {
+    width: 80%;
+
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        ;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+    }
+}
+
+a {
+    transition: 0.4s linear;
+    padding: 5px 10px;
+}
+
+.active {
+    background-color: aqua;
+    color: #000;
+}

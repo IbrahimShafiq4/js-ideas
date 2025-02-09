@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <div class="content">
+                <h2>Ibrahim</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae nobis commodi odio
+                    voluptatem ex consectetur consequatur? Nulla debitis dolor amet fugit, eum natus ipsam sunt
+                    architecto laboriosam saepe quibusdam voluptas
+                </p>
+            </div>
+            <span></span>
+        </div>
+    </div>
+
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Username">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent form submission
+
+            const formData = new FormData(e.target); // Get form data
+
+            // for (let index = 0; index < formData.entries(); index++) {
+            //     console.log(index)
+            // }
+
+            for (const element of formData.entries()) {
+                console.log(element)
+            }
+
+            formData.forEach(([key, value]) => {
+                console.log(`forEach loop ${key + ' ' + value}`)
+            })
+
+            console.log(formData.entries())
+
+            const formValues = Object.fromEntries(formData.entries()); // Convert to key-value pairs
+
+            console.log(formValues); // Log the form data
+        });
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
