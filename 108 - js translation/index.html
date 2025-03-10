@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="languageSwitcher">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+    </select>
+
+    <div class="initial-data">
+        <h1 data-i18n="welcome">Welcome</h1>
+        <p data-i18n="description">This is a multilingual website.</p>
+    </div>
+    <button data-i18n="contact_us">Contact Us</button>
+
+
+    <script src="./i18next.min.js"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
