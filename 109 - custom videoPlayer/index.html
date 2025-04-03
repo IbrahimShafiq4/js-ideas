@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom VideoPlayer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Custom Video Player</h3>
+
+        <div class="c-video">
+            <video src="./assets/nature.mp4" autoplay></video>
+            <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+            </div>
+
+            <div class="c-video-controls">
+                <div class="orange-bar-parent">
+                    <div class="orange-bar"></div>
+                </div>
+                <div class="video-settings-controls">
+                    <div class="play-pause-timer-controls">
+                        <div class="play-pause">
+                            <i class="fa-solid fa-play play-pause-icon"></i>
+                        </div>
+                        <div class="volume-changer appearing-volume-input">
+                            <i class="fa-solid fa-volume-high" title="m"></i>
+                            <input type="range" name="volume-range" max="1" min="0" step="0.1" value="1"
+                                id="volume-range" title="volume-range-changer">
+                        </div>
+                        <div class="timer">
+                            <span class="current-time">00</span> <span>/</span> <span class="duration-time">00</span>
+                        </div>
+                    </div>
+                    <div class="settings-controls">
+                        <div class="caption"><i class="fa-solid fa-closed-captioning"></i></div>
+                        <div class="speed">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <div class="speed-list ul-list">
+                                <ul>
+                                    <li>0.25</li>
+                                    <li>0.5</li>
+                                    <li>0.75</li>
+                                    <li>1</li>
+                                    <li>1.25</li>
+                                    <li>1.5</li>
+                                    <li>1.75</li>
+                                    <li>2</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="picture-in-picture"><i class="fa-solid fa-clone"></i></div>
+                        <div class="settings">
+                            <i class="fa-solid fa-gear"></i>
+                            <div class="video-resolution ul-list">
+                                <ul>
+                                    <li>144</li>
+                                    <li>240</li>
+                                    <li>360</li>
+                                    <li>480</li>
+                                    <li>720</li>
+                                    <li>1080</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="theater-mode"><i class="fa-solid fa-tv"></i></div>
+                        <div class="fullscreen"><i class="fa-solid fa-expand"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
