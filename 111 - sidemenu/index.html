@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside>
+        <div class="logo">
+            <i class="fa-brands fa-slack"></i>
+            <h3>Aside Menu</h3>
+        </div>
+        <div class="aside-content">
+            <div class="t-content">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="search-input" id="search-input">
+                </div>
+            </div>
+            <div class="b-content">
+                <div class="tb-content">
+                    <ul>
+                        <li>
+                            <a href="https://www.google.com" target="_blank"
+                                style="--clr: #EA4335; --right-position: -272%;" data-name="Google">Google</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank"
+                                style="--clr: #3B5998; --right-position: -329%;" data-name="Facebook">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com" target="_blank"
+                                style="--clr: #0077B5; --right-position: -310%;" data-name="Linkedin">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="https://www.x.com/" target="_blank"
+                                style="--clr: #000000; --right-position: -275.5%;" data-name="Twitter">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank"
+                                style="--clr: #E1306C; --right-position: -355.4%" data-name="Instagram">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bb-content">
+                    <ul>
+                        <li>
+                            <a href="https://example.com/settings" style="--clr: #FFA500; --right-position: -308%;"
+                                data-name="Settings">Settings</a>
+                        </li>
+                        <li>
+                            <a href="https://example.com/notifications" style="--clr: #32CD32; --right-position: -417%;"
+                                data-name="Notifications">Notifications</a>
+                        </li>
+                        <li>
+                            <a href="https://example.com/profile" style="--clr: #1E90FF; --right-position: -262%;"
+                                data-name="Profile">Profile</a>
+                        </li>
+                    </ul>
+                    <div class="user">
+                        <figure>
+                            <img src="https://static.vecteezy.com/system/resources/previews/000/152/371/large_2x/vector-close-up-of-gaza-strip-flag.jpg"
+                                alt="free gaza">
+                        </figure>
+                        <div class="user-details">
+                            <div class="user-details-bx">
+                                <h4>Free Gaza</h4>
+                                <p>StopTheGenocide@gmail.com</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </div>
+                    </div>
+                    <div class="side-bar-collapse-btn">
+                        <i class="fa-solid fa-arrow-right-arrow-left" role="button"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="settings-appearance">
+        <i class="fa-solid fa-gears gear-btn"></i>
+        <div class="settings-form">
+            <div>
+                <label for="links">Which group ?</label>
+                <select name="links" id="links">
+                    <option value="tb-content">First Group</option>
+                    <option value="bb-content">Second Group</option>
+                </select>
+            </div>
+            <div>
+                <label for="link_name">Link name</label>
+                <input type="text" class="Link name" name="link_name" id="link_name">
+            </div>
+
+            <div>
+                <label for="link_link">Browsing link</label>
+                <input type="text" class="link" name="link_link" id="link_link">
+            </div>
+            <div>
+                <label for="link_color">Link Color</label>
+                <input type="color" name="link_color" id="link_color">
+            </div>
+            <button>Add link</button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
