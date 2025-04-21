@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency api</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1>Currency Converter Application</h1>
+    <div class="currency-changer">
+        <div class="currency-changer__amount__input">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Amount" class="currency-changer__input">
+        </div>
+        <div class="currency-changer__container">
+            <div class="currency-changer__container__item">
+                <label for="from">From</label>
+                <div class="currency-changer__container__item__select" id="from">
+                    <div class="currency-changer__container__currency__item currency__select">
+                        <h6> Choose currency </h6>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul>
+                        <li>USD</li>
+                        <li>EGP</li>
+                        <li>AUD</li>
+                        <li>CAD</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="currency-changer__swap__container__item">
+                <i class="fa-solid fa-right-left"></i>
+            </div>
+            <div class="currency-changer__container__item">
+                <label for="to">To</label>
+                <div class="currency-changer__container__item__select" id="to">
+                    <div class="currency-changer__container__currency__item currency__select">
+                        <h6> Choose currency </h6>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul>
+                        <li>USD</li>
+                        <li>EGP</li>
+                        <li>AUD</li>
+                        <li>CAD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button id="convert" class="currency-changer__button">Convert</button>
+        <div class="currency-changer__result">
+            <p id="result" class="currency-changer__result__text">Result: <span>10$</span></p>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
