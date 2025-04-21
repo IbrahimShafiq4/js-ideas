@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <h1>Events Manager Application</h1>
+
+  <div class="container">
+    <div class="add-box">
+      <h2>Add Event</h2>
+
+      <input type="text" name="event-name" placeholder="Event name" id="event-name" class="event-name">
+
+      <input type="text" name="organizer" placeholder="Organizer" id="organizer" class="organizer">
+
+      <input type="date" name="event-date" id="event-date" class="event-date">
+
+      <button class="add-event" type="button">Add Event</button>
+    </div>
+    <button type="button" class="delete-events">Delete Events</button>
+    <div class="events"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1>Image Slider with Thumbnails
+
+        <button type="button" class="cards-btn-transform"> Cards ? </button>
+
+    </h1>
+    <div class="slider-container">
+        <div class="image-sliders">
+            <button type="button" class="prev-btn">Previous</button>
+            <div class="slider">
+                    <div class="img-id">Image 1</div>
+                    <img class="active" src="images/01.jpg" alt="Image 1">
+                    <img src="images/02.jpg" alt="Image 2">
+                    <img src="images/03.jpg" alt="Image 3">
+                    <img src="images/04.jpg" alt="Image 4">
+                    <img src="images/05.jpg" alt="Image 5">
+                    <img src="images/06.jpg" alt="Image 6">
+                    <img src="images/07.jpg" alt="Image 7">
+                    <img src="images/08.jpg" alt="Image 8">
+                </div>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <div class="cards-sliders-content">
+            <button type="button" class="arrow-left"> <i class="fa-solid fa-arrow-left"></i> </button>
+            <div class="cards-slider">
+                <div class="card">
+                    <figure>
+                        <img class="active" src="images/01.jpg" alt="Image 1">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Image 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button> hello </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/02.jpg" alt="Image 2">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Image 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button> hello </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/03.jpg" alt="Image 3">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Image 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button> hello </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/04.jpg" alt="Image 4">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Image 4</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button> hello </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/05.jpg" alt="Image 5">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Image 5</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button> hello </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/06.jpg" alt="Image 6">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Image 6</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button> hello </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/07.jpg" alt="Image 7">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Image 7</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button> hello </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/08.jpg" alt="Image 8">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Image 8</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button> hello </button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="arrow-right"> <i class="fa-solid fa-arrow-right"></i> </button>
+        </div>
+    </div>
+    <div class="gallery-container"></div>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

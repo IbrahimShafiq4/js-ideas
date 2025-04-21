@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Viewer</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            gap: 1rem;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .input-details label {
+            padding: 8px 15px;
+            border-radius: 6px;
+            background-color: #0F0E0E;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        iframe {
+            width: 90%;
+            max-width: 800px;
+            height: 600px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+            resize: both;
+        }
+
+        .message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="input-details">
+        <input type="file" id="pdfFile" accept="application/pdf">
+        <label for="pdfFile">Upload PDF</label>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <iframe id="pdfViewer"></iframe>
+    <script>
+        const fileInput = document.getElementById('pdfFile');
+        const pdfViewer = document.getElementById('pdfViewer');
+
+        fileInput.addEventListener('change', function () {
+            const file = this.files[0];
+
+            if (file && file.type === "application/pdf") {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const base64PDF = e.target.result;
+                    localStorage.setItem('pdfBase64', base64PDF);
+                    pdfViewer.src = base64PDF;
+                };
+
+                reader.readAsDataURL(file); // Converts to base64
+            } else {
+                alert("Please select a valid PDF file.");
+            }
+        });
+
+        // Load from localStorage if available
+        window.onload = function () {
+            const storedPDF = localStorage.getItem('pdfBase64');
+            if (storedPDF) {
+                pdfViewer.src = storedPDF;
+            }
+        };
+    </script>
+
+</body>
+
+</html>
