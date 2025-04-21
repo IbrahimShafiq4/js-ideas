@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="to-do parent-box" style="--clr: #b22222">
+            <div class="box-header">
+                <div class="header-box">
+                    <div class="box-title">
+                        <h3> pending </h3>
+                    </div>
+                    <div class="box-controls">
+                        <div class="controls-list">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-ellipsis-vertical list-opener"></i>
+                            <div class="menu-list">
+                                <ul>
+                                    <li class="add-state">
+                                        <div><i class="fa-solid fa-plus add-state-btn"></i></div>
+                                    </li>
+                                    <li class="edit-btn">
+                                        <div>
+                                            <i class="fa-solid fa-pen"></i>
+                                        </div>
+                                    </li>
+                                    <li class="delete-btn">
+                                        <div>
+                                            <i class="fa-solid fa-trash-alt"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-content-details">
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="./assets/img (1).jpg" alt="">
+                            </figure>
+                            <div class="content_bx">
+                                <div class="content-details">
+                                    <h5>Title</h5>
+                                    <p>Description</p>
+                                </div>
+                                <div class="content-badge">
+                                    Pending
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="./assets/img (1).jpg" alt="">
+                            </figure>
+                            <div class="content_bx">
+                                <div class="content-details">
+                                    <h5>Title</h5>
+                                    <p>Description</p>
+                                </div>
+                                <div class="content-badge">
+                                    Pending
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="on-progress parent-box" style="--clr: #201f50">
+            <div class="box-header">
+                <div class="header-box">
+                    <div class="box-title">
+                        <h3> inProgress </h3>
+                    </div>
+                    <div class="box-controls">
+                        <div class="controls-list">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-ellipsis-vertical list-opener"></i>
+                            <div class="menu-list">
+                                <ul>
+                                    <li>
+                                        <div class="add-state"><i class="fa-solid fa-plus add-new-state"></i></div>
+                                    </li>
+                                    <li>
+                                        <div class="edit-btn">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="delete-btn">
+                                            <i class="fa-solid fa-trash-alt"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-content-details"></div>
+            </div>
+        </div>
+        <div class="done parent-box" style="--clr: #1f501f">
+            <div class="box-header">
+                <div class="header-box">
+                    <div class="box-title">
+                        <h3> Done </h3>
+                    </div>
+                    <div class="box-controls">
+                        <div class="controls-list">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-ellipsis-vertical list-opener"></i>
+                            <div class="menu-list">
+                                <ul>
+                                    <li>
+                                        <div class="add-state"><i class="fa-solid fa-plus add-new-state"></i></div>
+                                    </li>
+                                    <li>
+                                        <div class="edit-btn">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="delete-btn">
+                                            <i class="fa-solid fa-trash-alt"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-content-details"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-edit-category">
+        <form class="form-category">
+            <div>
+                <label for="cateogry_name">
+                    Category name
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <input type="text" name="category_name" id="category_name">
+            </div>
+
+            <button class="category-btn"> Add Category </button>
+        </form>
+    </div>
+
+    <div class="add-edit-state">
+        <form class="form-state">
+            <div>
+                <label for="state_name">
+                    State name
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <input type="text" name="state_name" id="state_name">
+            </div>
+            <div>
+                <label for="state_status">Status</label>
+                <input type="text" name="state_status" id="state_status">
+            </div>
+            <div>
+                <label for="state_img">State img</label>
+                <input type="file" name="state_img" id="state_img">
+            </div>
+            <button class="state-btn"> Add State </button>
+        </form>
+    </div>
+
+    <div class="add-category-btn">
+        <button type="button" class="add-newCategory-popup">New category</button>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
