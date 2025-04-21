@@ -151,6 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Close the dropdown
             item.closest('ul').classList.remove('active__list');
+
+            if (currencyInput.value) convertCurrency();  // Re-trigger conversion if there's a value in the input
         });
     });
 
@@ -168,6 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Close the dropdown
             item.closest('ul').classList.remove('active__list');
+
+            if (currencyInput.value) convertCurrency();  // Re-trigger conversion if there's a value in the input
         });
     });
 
@@ -209,6 +213,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const value = parseFloat(currencyInput.value);
         if (!isNaN(value)) {
             currencyValue = value;
+            currencyInput.value = value;
+            convertCurrency()
         } else {
             currencyInput.value = '';
             currencyValue = 0;
