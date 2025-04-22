@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <h1>Bookmarks Manager Application</h1>
+
+    <div class="container">
+        <form>
+            <h2>Add new Bookmark</h2>
+
+            <input type="text" id="title" placeholder="Website Title">
+            <input type="url" id="url" placeholder="Website URL">
+            <div class="category-suggestions">
+                <h4>
+                    Choose from Categories List or Add New Category
+                </h4>
+                <div class="categories"></div>
+            </div>
+            <input type="text" id="category" placeholder="Website Category">
+            <button type="button">Add Bookmark</button>
+        </form>
+        <h2 class="all"> Show All Bookmarks </h2>
+        <div class="bookmark-controls">
+            <button type="button" class="delete-all" style="--clr: #D7263D">Delete All Bookmarks</button>
+            <button type="button" data-criteria="asc" class="ctrl-btn sort-asc" style="--clr: #43B929">Sort
+                Ascending</button>
+            <button type="button" data-criteria="desc" class="ctrl-btn sort-desc" style="--clr: #3A7D44">Sort
+                Descending</button>
+            <button type="button" data-criteria="alphabetical" class="ctrl-btn sort-alphabetical"
+                style="--clr: #7E5BEF">Sort Alphabetically</button>
+            <button type="button" data-criteria="reverseAlphabetical" class="ctrl-btn sort-reverse-alphabetical"
+                style="--clr: #BB86FC">Sort Reverse
+                Alphabetically</button>
+            <button type="button" data-criteria="date" class="ctrl-btn sort-by-date" style="--clr: #374785">Sort by
+                Date</button>
+            <button type="button" data-criteria="category" class="ctrl-btn sort-by-category" style="--clr: #D4AF37">Sort
+                by Category</button>
+            <button type="button" data-criteria="website" class="ctrl-btn sort-by-website" style="--clr: #1CA9C9">Sort
+                by Website</button>
+            <button type="button" data-criteria="url" class="ctrl-btn sort-by-url" style="--clr: #A0522D">Sort by
+                URL</button>
+            <button type="button" class="vertical-bookmarks" style="--clr: #9932CC">Vertical Bookmarks</button>
+            <button type="button" class="horizontal-bookmarks" style="--clr: #FF6EC7">Horizontal Bookmarks</button>
+        </div>
+
+
+        <div class="sort-bookmarks"></div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search Bookmarks...">
+            <button type="button">Search</button>
+        </div>
+        <div class="category-buttons">
+            <h4 class="filter-btn">Filter Bookmarks by Added Categories
+            </h4>
+            <div></div>
+        </div>
+        <div class="bookmarks"></div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
