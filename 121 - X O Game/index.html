@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tic Tac Toe Game</h1>
+    
+    <div class="game-container">
+        <!-- Game mode selection buttons -->
+        <div class="mode-selection">
+            <button id="pvp-btn">Player vs Player</button>
+            <button id="pvc-btn">Player vs Computer</button>
+        </div>
+        
+        <!-- Game status display -->
+        <div class="status">Select game mode to start</div>
+        
+        <!-- The game board -->
+        <div class="board"></div>
+        
+        <!-- Game controls -->
+        <div class="controls">
+            <button class="restart-btn">Restart Game</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
