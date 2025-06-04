@@ -21,24 +21,27 @@ body {
         left: -200px;
         width: 200px;
         height: 2px;
-        transform: rotateX(calc(18deg * var(--j)));
         transform-origin: right;
 
         &::before {
-            content: '';
+            content: '👌';
             position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
             width: 15px;
             height: 15px;
-            background-color: #00ebff;
+            background-color: #fff;
             border-radius: 50%;
             box-shadow: 
-                        0 0 10px #00ebff,
-                        0 0 20px #00ebff,
-                        0 0 40px #00ebff,
-                        0 0 60px #00ebff,
-                        0 0 80px #00ebff,
-                        0 0 100px #00ebff;
-            animation: animate 2s linear infinite;
+                        0 0 10px #fff,
+                        0 0 20px #fff,
+                        0 0 40px #fff,
+                        0 0 60px #fff,
+                        0 0 80px #fff,
+                        0 0 100px #fff;
+            animation: animate 1s linear infinite;
             animation-delay: calc((-0.1s * var(--i)));
 
         }
@@ -47,7 +50,7 @@ body {
 
 @keyframes animate {
     0% {
-        transform: translateX(200px) scale(1);
+        transform: translateX(400px) scale(1);
         opacity: 0;
     }
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator With Options</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Password Generator With Options</h1>
+    <div class="container">
+        <div class="options">
+            <label>
+                Password Length
+                <input placeholder="Password Length {1, 32}" type="text" name="password-length" class="pass-length"
+                    id="length" value="10">
+            </label>
+            <label>
+                Include Numbers
+                <input type="checkbox" name="include-numbers" id="include-numbers" checked />
+                <span></span>
+            </label>
+            <label>
+                Special Characters
+                <input type="checkbox" name="include-special" id="include-special" checked />
+                <span></span>
+            </label>
+        </div>
+        <button id="generate" class="generate">Generate Password</button>
+        <div id="password" class="result">Passwords will appear here</div>
+        <h3>Latest 10 generated Password</h3>
+        <div id="saved-passwords" class="saved-passwords">
+        </div>
+    </div>
+
+    <dialog class="pop-up-dialog">
+        <div class="dialog-container">
+            <div class="close-mark">X</div>
+            <p></p>
+        </div>
+    </dialog>
+
+    <dialog class="copy-dialog" id="copy-dialog">
+        <div class="dialog-container">
+            <p>Password Copied to clipboard</p>
+        </div>
+    </dialog>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

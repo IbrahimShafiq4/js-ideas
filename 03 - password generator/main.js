@@ -52,9 +52,9 @@ resultInput.addEventListener('input', () => {
     updateCheckboxesAndStyles(resultInput.value);
 });
 
-function generatePassword(alphabets, length, existingLength) {
-    let password = resultInput.value;
-    for (let i = existingLength; i < length; i++) {
+function generatePassword(alphabets, length) {
+    let password = '';
+    for (let i = 0; i < length; i++) {
         let randomIndex = Math.floor(Math.random() * alphabets.length);
         password += alphabets[randomIndex];
     }
@@ -62,13 +62,14 @@ function generatePassword(alphabets, length, existingLength) {
 }
 
 function isValidPassword(password) {
-    let hasUppercase = uppercaseCheckbox.checked ? /[A-Z]/.test(password) : true;
-    let hasLowercase = lowercaseCheckbox.checked ? /[a-z]/.test(password) : true;
-    let hasNumbers = numbersCheckbox.checked ? /[0-9]/.test(password) : true;
-    let hasSymbols = symbolsCheckbox.checked ? /[!@#$%^&*()]/.test(password) : true;
+    let hasUppercase = !uppercaseCheckbox.checked || /[A-Z]/.test(password);
+    let hasLowercase = !lowercaseCheckbox.checked || /[a-z]/.test(password);
+    let hasNumbers = !numbersCheckbox.checked || /[0-9]/.test(password);
+    let hasSymbols = !symbolsCheckbox.checked || /[!@#$%^&*()_=+]/.test(password);
 
-    return hasUppercase || hasLowercase || hasNumbers || hasSymbols;
+    return hasUppercase && hasLowercase && hasNumbers && hasSymbols;
 }
+
 
 function logCheckedParents() {
     let checkboxes = [uppercaseCheckbox, lowercaseCheckbox, numbersCheckbox, symbolsCheckbox];
@@ -112,7 +113,11 @@ copyBtn.addEventListener('click', () => {
     } else {
         resultInput.select();
         resultInput.setSelectionRange(0, 99999);
-
         navigator.clipboard.writeText(resultInput.value);
+
+        copyBtn.innerHTML = '<i class="ri-check-line"></i>';
+        setTimeout(() => {
+            copyBtn.innerHTML = '<i class="ri-file-copy-fill"></i>';
+        }, 1500);
     }
 });

@@ -1,7 +1,0 @@
-prepend()
-بيضيف العنصر في بداية ال 
-parent
-
-appendChild()
-بيضيف العنصر ف نهاية ال 
-parent

@@ -23,6 +23,12 @@ div {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+
+div:hover {
+    box-shadow: 0 0 10px #0000008c;
 }
 
 div::before {
@@ -35,10 +41,12 @@ div::before {
 }
 
 div::after {
-    content: "Animation";
+    content: "Loading";
     width: 190px;
     height: 190px;
-    background-color: #101010;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: #2e2e2e;
     position: absolute;
     border-radius: inherit;
     display: flex;
@@ -46,12 +54,17 @@ div::after {
     justify-content: center;
     color: #ff0052;
     font-size: larger;
+    font-family: cursive;
     letter-spacing: 5px;
     box-shadow:
-        inset 10px 10px 10px #0000008c,
-        inset -10px -10px 10px #0000008c;
-    font-family: Arial, Helvetica, sans-serif;
+        inset 20px 20px 20px #0000008c,
+        inset -20px -20px 20px #0000008c;
     font-weight: 900;
+    transition: 0.3s linear;
+}
+
+div:hover::after {
+    letter-spacing: -2px;
 }
 
 @keyframes rotate {
@@ -60,12 +73,13 @@ div::after {
     }
 
     100% {
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
 
 @keyframes hue-rotate {
-    0%, 100% {
+    0%,
+    100% {
         filter: hue-rotate(0deg);
     }
 

@@ -1,0 +1,132 @@
+/* Reset & container */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    padding: 60px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Article base styles */
+article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    transform: scale(0.95);
+    opacity: 0;
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+/* Content box */
+.content-bx {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s ease;
+    transition-delay: 0.3s;
+    position: relative;
+    z-index: -1;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.img-bx {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s ease;
+    transition-delay: 0.5s;
+    position: relative;
+    z-index: 9;
+}
+
+/* Image */
+.img-bx img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* On scroll-in */
+article.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+article.fade-in .content-bx,
+article.fade-in .img-bx {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    article {
+        flex-direction: column;
+    }
+
+    article:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .content-bx,
+    .img-bx {
+        transform: translateY(40px);
+    }
+
+    article.fade-in .content-bx,
+    article.fade-in .img-bx {
+        transform: translateY(0);
+    }
+}
+
+article.alternate-layout {
+    flex-direction: row-reverse;
+}
+
+article {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+article.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}

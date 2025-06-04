@@ -1,0 +1,345 @@
+:root {
+    --main-blue: #141a49;
+    --main-blue-hover: #040822;
+    --main-border-radius: 5px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: cursive;
+    font-optical-sizing: auto;
+    background-color: #eee;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.options label {
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.options label:hover {
+    background-color: #f9f9f9;
+}
+
+.options label:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+.options label input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: var(--main-border-radius);
+    margin: 20px auto 0;
+    height: 35px;
+    outline: none;
+}
+
+.options label input[type="checkbox"] {
+    display: none;
+}
+
+.options label span {
+    width: 70px;
+    height: 35px;
+    border-radius: 20px;
+    display: block;
+    margin: 20px auto 0;
+    background-color: #141a49;
+    position: relative;
+}
+
+.options label span::after {
+    content: "";
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    transition: 0.3s linear;
+    font-size: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-delay: 0.3s;
+    border: 3px solid transparent;
+}
+
+.options label input[type="checkbox"]:checked~span::after {
+    content: "";
+    border-radius: 0;
+    border: 3px solid transparent;
+    border-right: 3px solid #98ff22;
+    border-bottom: 3px solid #98ff22;
+    width: 5px;
+    height: 10px;
+    transform: translateY(-70%) translateX(44px) rotate(45deg);
+    background: transparent;
+    transition-delay: 0.3s;
+}
+
+.generate {
+    background-color: #141a49;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: var(--main-border-radius);
+    width: 100%;
+    transition: 0.3s linear;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+}
+
+.generate:hover {
+    background-color: #040822;
+}
+
+.result {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: var(--main-border-radius);
+    border: 2px dashed var(--main-blue);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .password-text {
+        flex-grow: 1;
+        word-break: break-all;
+        text-align: center;
+    }
+}
+
+h3 {
+    text-align: center;
+    padding: 20px;
+    background-color: #ccc;
+    border-radius: var(--main-border-radius);
+    margin-block: 20px;
+}
+
+.saved-passwords {
+    border-radius: var(--main-border-radius);
+    padding: 20px;
+    background-color: #fff;
+}
+
+.saved-passwords>div {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 15px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .password-text {
+        word-break: break-all;
+        flex-grow: 1;
+    }
+}
+
+.saved-passwords>div:first-child {
+    padding-top: unset;
+}
+
+.saved-passwords>div:last-child {
+    padding-bottom: unset;
+}
+
+.saved-passwords>div:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.saved-passwords>div>span.counter-num {
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-blue);
+    color: #fff;
+    border-radius: var(--main-border-radius);
+}
+
+.saved-passwords>div>.copy-btn {
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 5px 10px;
+    background-color: #98ff22;
+    border-radius: var(--main-border-radius);
+    cursor: pointer;
+}
+
+.pop-up-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    &[open] {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.pop-up-dialog .dialog-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: var(--main-border-radius);
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transform: translateY(20px);
+    transition: 0.3s linear;
+}
+
+.pop-up-dialog:open .dialog-container {
+    transform: translateY(0px);
+}
+
+.pop-up-dialog .dialog-container .close-mark {
+    font-size: 1rem;
+    align-self: flex-end;
+    cursor: pointer;
+    background-color: var(--main-blue);
+    padding: 3px 8px;
+    color: #fff;
+    border-radius: calc(var(--main-border-radius) / 2);
+}
+
+.pop-up-dialog .dialog-container p {
+    font-size: 1.5rem;
+    color: var(--main-blue);
+}
+
+.copy-dialog {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    margin-left: auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: max-content;
+    border-radius: var(--main-border-radius);
+    z-index: 1000;
+    border: unset;
+    padding: 3px;
+    overflow: hidden;
+    background-color: transparent;
+
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    &[open] {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fffb00;
+        box-shadow: 0 0 10px #fffb00,
+            0 0 20px #fffb00,
+            0 0 30px #fffb00;
+        animation: rotate 3s linear infinite;
+    }
+}
+
+.copy-dialog .dialog-container {
+    background-color: #000;
+    padding: 10px;
+    border-radius: var(--main-border-radius);
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    >* {
+        color: #fff;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
